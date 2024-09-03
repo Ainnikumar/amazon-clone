@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo">
+                </div>
+            </div>
+
+            <div class="nav-addres border">
+                <img src="./location.svg" alt="">
+                <div class="address">
+                    <span>Deliver to</span>
+                    <span>India</span>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="search amazon" class="search-input">
+                <div class="scan">
+                    <img src="./scan.jpg" alt="">
+                </div>
+                <div class="search-icons">
+                    <img src="./images/search.png" alt="">
+                </div>
+            </div>
+
+            <div class="nav-signin border pad">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second"> Account & lists</p>
+            </div>
+
+            <div class="nav-return border pad">
+                <p><span>Returns</span></p>
+                <p class="nav-second"> & Orders</p>
+            </div>
+            <div class="navcart border">
+                <div>
+                    <img src="cart.png" alt="">
+                    <p>0</p>
+                </div>
+                <span>Cart</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all">
+                <img src="menu.png" alt="" style="filter: invert(100%);">
+                <span>All</span>
+            </div>
+            <div class="panel-ops">
+                <p>Fresh</p>
+                <p>Amazon miniTV</p>
+                <p>Mobiles</p>
+                <p>Today's Deals</p>
+                <p>Best Sellers</p>
+                <p>Electronics</p>
+                <p>Sell</p>
+                <p>Prime</p>
+                <p>Customer Service</p>
+                <p>New Releases</p>
+                <p>Home & Kitchen</p>
+            </div>
+            <div class="panel-deals">
+                New launches from Mobiles,Electronics & more|Shop now
+            </div>
+                
+        </div>
+    </header>
+
+    <div class="main-section">
+        <div class="hero-sec">
+            <img src="heroimage.jpg" alt="">
+        </div>
+
+
+        <div class="shop-sec">
+            <div class="box1 box">
+                <h2>Health & Personal Care</h2>
+                <div class="box-1">
+                    <img src="box2_image.jpg" alt="">
+                    <p>See more</p>
+                </div>
+            </div>
+            <div class="box2 box">
+                <h2>Fashion & Clothing</h2>
+                <div class="box-1">
+                    <img src="box1_image.jpg" alt="">
+                    <p>See more</p>
+                </div>
+            </div>
+            <div class="box3 box">
+                <h2>Furnitures & tools</h2>
+                <div class="box-1">
+                    <img src="box3_image.jpg" alt="">
+                    <p>See more</p>
+                </div>
+            </div>
+            <div class="box4 box">
+                <h2>Moblies & Tablets</h2>
+                <div class="box-1">
+                    <img src="box4_image.jpg" alt="">
+                    <p>See more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var searchInput = document.querySelector('.search-input');
+            var navSearch = document.querySelector('.nav-search');
+
+            searchInput.addEventListener('click', function (event) {
+                event.stopPropagation(); // Stop the click event from propagating up to the document
+                navSearch.classList.add('clicked');
+            });
+
+            navSearch.addEventListener('mouseleave', function () {
+                navSearch.classList.remove('clicked');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
